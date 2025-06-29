@@ -28,7 +28,7 @@ const Signup = () => {
     }
 
     try {
-      const url = "http://localhost:8080/auth/signup";
+      const url = "https://auth-mern-app-back.onrender.com";
       const response = await fetch(url, {
         method: "POST",
         headers: {
