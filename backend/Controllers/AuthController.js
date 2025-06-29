@@ -41,7 +41,7 @@ const login = async (req, res) => {
     const jwtToken = jwt.sign(
       { email: user.email, _id: user._id },
       process.env.JWT_SECRET,
-      { expiresIn: '24h' } // ✅ FIXED typo
+      { expiresIn: '24h' } //  FIXED typo
     );
 
     res.status(200).json({
@@ -53,7 +53,7 @@ const login = async (req, res) => {
     });
 
   } catch (err) {
-    console.error("Login error:", err); // ✅ Helpful for debugging
+    console.error("Login error:", err); //  Helpful for debugging
     res.status(500).json({ message: "internal server error", success: false });
   }
 };
